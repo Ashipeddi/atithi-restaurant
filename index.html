@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atithi | Fast Food Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="main_banner.png" alt="Delicious Food Banner" class="banner-image">
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Starters</h3>
+                <p>Samosa - Crispy and spicy potato-filled samosas</p>
+                <p>Vada Pav - The iconic Mumbai street food</p>
+            </div>
+            <div class="menu-item">
+                <h3>Main Course</h3>
+                <p>Pav Bhaji - Mashed vegetables served with buttered pav</p>
+                <p>Chole Bhature - Fluffy bhature with spicy chickpea curry</p>
+                <p>Masala Dosa - Thin, crispy dosa with potato filling</p>
+                <p>Rava Dosa - Crunchy, semolina-based dosa</p>
+                <p>Biryani - Aromatic rice cooked with spices</p>
+            </div>
+            <div class="menu-item">
+                <h3>Pizza</h3>
+                <p>Atithi's special Indian-inspired pizza</p>
+            </div>
+            <div class="menu-item">
+                <h3>Desserts & Drinks</h3>
+                <p>Mango Lassi - Refreshing yogurt and mango drink</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="location">
+        <h2>Find Us</h2>
+        <p><strong>Atithi</strong></p>
+        <p>Bengaluru, Karnataka</p>
+        <p>Near Indiranagar Metro Station</p>
+        <p><strong>Phone:</strong> +91 98763210</p>
+        <p><strong>Email:</strong> contact@atithi.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Atithi. All rights reserved.</p>
+    </footer>
+
+    <!-- Chat Widget Button -->
+    <div id="chat-button" class="chat-button">
+        <button onclick="toggleChat()">Chat with us</button>
+    </div>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <button class="close-button" onclick="toggleChat()">X</button>
+        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/dbca2de2-d3b3-4694-ac6c-2991373b035f"></iframe>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var chatWidget = document.getElementById('chat-widget');
+            var chatButton = document.getElementById('chat-button');
+            if (chatWidget.style.display === 'none' || chatWidget.style.display === '') {
+                chatWidget.style.display = 'block';
+                chatButton.style.display = 'none';
+            } else {
+                chatWidget.style.display = 'none';
+                chatButton.style.display = 'block';
+            }
+        }
+
+        // Initially hide the chat widget
+        document.getElementById('chat-widget').style.display = 'none';
+    </script>
+</body>
+</html>
